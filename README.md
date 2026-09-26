@@ -2,8 +2,6 @@
 
 **An evidence-backed research queue for public-company screening.** AlphaSift helps an analyst move from a broad universe to companies worth investigating, then see why each company received its label. It is a working, owner-only beta. This repository is a separate case study, not the operational source or a public product login.
 
-> **Beta at a glance — 26 September 2026:** 1,534 companies stored; 1,531 screened (99.8%); 44 marked *Investigate*, 887 *Watch*, and 600 *Excluded*. Three companies remain unevaluated because price history was unavailable. These are research-priority labels, not investment recommendations. Financial evidence is older than the latest market refresh for much of the universe; see [current limits](#what-the-beta-can-and-cannot-claim).
-
 ## Why build it?
 
 A conventional screener can produce a ranked list faster than an analyst can test the list's evidence. A high score can look decisive even when the underlying filing is old, a quality check conflicts, or a ticker was never evaluated. The resulting work is scattered across price screens, filings, spreadsheets, and notes.
@@ -24,33 +22,33 @@ For example, an *Investigate* label may coexist with two conflicting financial c
 
 ## Working product screens
 
-These screenshots show the **real AlphaSift interface**. The Data Health, readiness, and screening-guide images were captured from the owner-only beta on **26 September 2026** and show product-generated aggregate counts and explanations. The screener, company, comparison, and Superinvestors images were captured from the same product UI components running locally against an [entirely fictional 20-company example](data/fictional-product-snapshot.json). **Every company, manager, holding, price, score, and check value in those example-data images is invented.** The yellow banner in each example-data image makes that distinction visible. They demonstrate the workflow and layout; they do not depict the active beta's companies or holdings.
+These captures show the real AlphaSift interface. The screener, company, comparison, and Superinvestors screens use an [entirely fictional 20-company example](data/fictional-product-snapshot.json). Their yellow banners mark the invented companies, managers, holdings, prices, scores, and checks. The Data Health and screening-guide captures come from the owner-only beta and show aggregate results and product explanations, dated **26 September 2026**.
 
-**1. Check what is actually covered.** This authentic Data Health capture reports **1,531 of 1,534 screened (99.8%)**, zero failed or quarantined records, and the accepted dataset date. The readiness view distinguishes refreshed market evidence from older financial records.
-
-![AlphaSift beta Data Health showing 1,531 of 1,534 companies screened](assets/product-data-health.jpg)
-
-![AlphaSift beta screening readiness showing market and fundamental evidence separately](assets/product-readiness.jpg)
-
-**2. Filter the research queue.** The following two captures use fictional example data: 19 of 20 invented companies have screening results; one remains visibly unevaluated. The table ranks the evaluated companies and keeps their checks and gaps in view.
+**1. Find a candidate.** In this fictional example, 19 of 20 companies have screening results; one is visibly unevaluated. The screener separates research priority from evidence readiness and lets an analyst filter the evaluated list.
 
 ![Actual AlphaSift screener interface with a clearly labelled fictional 20-company example](assets/example-screener-overview.jpg)
 
 ![Actual AlphaSift screener table populated with invented company names and figures](assets/example-screener-rows.jpg)
 
-**3. Open the evidence.** Fictional Alder Devices has an *Investigate* label and a score of 24, yet two of its five invented checks conflict. The page makes the conflict visible beside the label.
+**2. Open the evidence.** Fictional Alder Devices has an *Investigate* label and a score of 24, yet two of its five invented checks conflict. The page shows that conflict beside the label.
 
 ![Actual AlphaSift company evidence interface showing fictional Alder Devices and invented checks](assets/example-company-evidence.jpg)
 
-**4. Compare candidates.** Selecting two fictional companies opens the product's side-by-side comparison of their stored fields.
+**3. Compare candidates.** Selecting two fictional companies opens a side-by-side comparison of their stored fields.
 
 ![Actual AlphaSift comparison interface populated with invented figures](assets/example-comparison.jpg)
 
-**5. Put reported ownership in context.** This Superinvestors capture uses invented managers, positions, weights, and activity labels. The real product groups holdings by reporting period; a reported position does not prove a current trade.
+**4. Put reported ownership in context.** This Superinvestors capture uses invented managers, positions, weights, and activity labels. The product groups holdings by reporting period; a reported position does not prove a current trade.
 
 ![Actual AlphaSift Superinvestors interface populated with entirely fictional holdings](assets/example-superinvestors.jpg)
 
-The [screening-guide capture](assets/product-screening-guide.jpg) is another authentic beta screen. The separate [two-company fictional walkthrough](demo/index.html) explains the coverage rule without credentials; it is a small teaching aid, distinct from the product UI captures above.
+**5. Check the dataset.** These authentic beta captures show 1,531 of 1,534 companies screened (99.8%) and distinguish refreshed market evidence from older financial records. Data Health also reports zero failed or quarantined records.
+
+![AlphaSift beta Data Health showing 1,531 of 1,534 companies screened](assets/product-data-health.jpg)
+
+![AlphaSift beta screening readiness showing market and fundamental evidence separately](assets/product-readiness.jpg)
+
+The [screening-guide capture](assets/product-screening-guide.jpg) shows how the product explains a result. A separate [two-company fictional walkthrough](demo/index.html) lets readers explore the coverage rule without credentials; it is a teaching aid, not a product screen.
 
 ## How the screening logic works
 
@@ -82,13 +80,11 @@ The Python engine separates provider retrieval from calculations and methodology
 
 This separation matters when a provider returns incomplete data. The last accepted dataset stays available, and gaps remain visible. It also makes the history auditable: a past result can be read as it was stored under its original method rather than reinterpreted by a later algorithm.
 
-## What the beta can and cannot claim
+## Data coverage and limits
 
-The **active** dataset was generated on 25 September and activated on 26 September 2026. Data Health reports **1,531 of 1,534 screened**, with **zero failed or quarantined records**. The three exceptions are **CWEN.A, HLX, and LEG**, each recorded as missing price history from the current market source. They are *not evaluated*, not *Excluded*. The screener shows 220 companies with complete evidence and 1,311 screened companies with evidence gaps. Data Health also retains 7,685 warnings for review; that warning count is separate from the number of failed records.
+The dataset shown here was generated on **25 September** and activated on **26 September 2026**. It screens **1,531 of 1,534 companies**. The other three lack price history from the current market source, so they remain *Not evaluated* rather than *Excluded*. Data Health shows coverage, source dates, warnings, and failed records for anyone reviewing a result.
 
-Market evidence is current for the 1,531 screened companies within this dataset's observation window. That does **not** mean every input is current: Data Health shows 1,307 companies with fundamental records and **zero with fundamentals marked current**. A market refresh does not refresh filings or manager holdings. The Site also has presentation issues still under review, including a rounded “100%” screener coverage badge for 99.8% and some technical warning text on company pages. These are reasons to inspect dates and source states, not to infer a refreshed financial record.
-
-AlphaSift has no live quote feed, return prediction, trade recommendation, or verified current superinvestor trades. The case study makes no measured claim about analyst time saved or investment performance. The operational Site and source repository remain private.
+Market evidence was refreshed within that dataset's observation window, while financial records remain older; none of the fundamental records are marked current. Refreshing prices does not refresh filings or manager holdings. AlphaSift has no live quote feed, return prediction, trade recommendation, or verified current superinvestor trades. This case study makes no measured claim about analyst time saved or investment performance. The operational Site and source repository remain private.
 
 ## Reproduce the coverage rule without access
 
