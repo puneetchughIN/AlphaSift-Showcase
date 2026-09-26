@@ -1,0 +1,2500 @@
+{
+  "schema_version": "1.0.0",
+  "snapshot_id": "snap_fictional_product_capture",
+  "snapshot_type": "composite",
+  "status": "valid",
+  "methodology": {
+    "methodology_id": "legacy-code-v1",
+    "engine_version": "0.1.0"
+  },
+  "worker_run_id": "fictional-showcase",
+  "idempotency_key": "fictional-showcase",
+  "started_at": "2026-09-25T09:00:00Z",
+  "completed_at": "2026-09-25T09:05:00Z",
+  "market_as_of": "2026-09-25T00:00:00Z",
+  "universe_version": "fictional-twenty-company-example",
+  "counts": {
+    "attempted": 20,
+    "completed": 20,
+    "skipped": 0,
+    "failed": 0,
+    "quarantined": 0
+  },
+  "companies": [
+    {
+      "identity": {
+        "canonical_symbol": "EX01",
+        "company_name": "Alder Devices",
+        "cik": null,
+        "index_name": null,
+        "sector": "Industrials",
+        "industry": "Industrial Technology"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "pass",
+          "metric_name": "Cash generation",
+          "value": 15,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation exceeds the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX01-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "fail",
+          "metric_name": "Balance sheet",
+          "value": 1.9,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Balance sheet does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX01-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "pass",
+          "metric_name": "Earnings quality",
+          "value": 13,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings growth is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX01-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "pass",
+          "metric_name": "Price trend",
+          "value": 53,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Trend strength is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX01-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "fail",
+          "metric_name": "Valuation",
+          "value": 20.4,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "Valuation does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX01-valuation",
+              "field": "valuation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 142.8,
+        "daily_change_pct": 0.9,
+        "drawdown_pct": 18.4,
+        "rsi14": 55.2,
+        "analyst_opinions": 8,
+        "analyst_upside_pct": 27.5,
+        "dislocation_score": 6.8
+      },
+      "scores": {
+        "total": 24,
+        "buffett": 9,
+        "lynch": 8,
+        "minervini": 7
+      },
+      "classification": "investigate",
+      "warnings": []
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX02",
+        "company_name": "Cedar Systems",
+        "cik": null,
+        "index_name": null,
+        "sector": "Information Technology",
+        "industry": "Software"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "pass",
+          "metric_name": "Cash generation",
+          "value": 15,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation exceeds the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX02-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "pass",
+          "metric_name": "Balance sheet",
+          "value": 1.2,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Leverage is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX02-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "pass",
+          "metric_name": "Earnings quality",
+          "value": 13,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings growth is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX02-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "fail",
+          "metric_name": "Price trend",
+          "value": 48,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Price trend does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX02-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "pass",
+          "metric_name": "Valuation",
+          "value": 19.7,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "Price relative to growth is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX02-valuation",
+              "field": "valuation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 154.45,
+        "daily_change_pct": 0.2,
+        "drawdown_pct": 21.2,
+        "rsi14": 56.9,
+        "analyst_opinions": 9,
+        "analyst_upside_pct": 25.4,
+        "dislocation_score": 7.6
+      },
+      "scores": {
+        "total": 23,
+        "buffett": 8,
+        "lynch": 7,
+        "minervini": 8
+      },
+      "classification": "investigate",
+      "warnings": []
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX03",
+        "company_name": "Northstar Components",
+        "cik": null,
+        "index_name": null,
+        "sector": "Industrials",
+        "industry": "Electrical Equipment"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "pass",
+          "metric_name": "Cash generation",
+          "value": 15,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation exceeds the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX03-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "pass",
+          "metric_name": "Balance sheet",
+          "value": 1.2,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Leverage is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX03-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "fail",
+          "metric_name": "Earnings quality",
+          "value": 8,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings quality does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX03-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "pass",
+          "metric_name": "Price trend",
+          "value": 53,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Trend strength is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX03-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "pass",
+          "metric_name": "Valuation",
+          "value": 19.7,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "Price relative to growth is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX03-valuation",
+              "field": "valuation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 166.1,
+        "daily_change_pct": -0.5,
+        "drawdown_pct": 24.0,
+        "rsi14": 58.6,
+        "analyst_opinions": 10,
+        "analyst_upside_pct": 23.3,
+        "dislocation_score": 8.4
+      },
+      "scores": {
+        "total": 21,
+        "buffett": 8,
+        "lynch": 7,
+        "minervini": 6
+      },
+      "classification": "investigate",
+      "warnings": []
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX04",
+        "company_name": "Willow Health",
+        "cik": null,
+        "index_name": null,
+        "sector": "Health Care",
+        "industry": "Medical Devices"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "pass",
+          "metric_name": "Cash generation",
+          "value": 15,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation exceeds the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX04-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "fail",
+          "metric_name": "Balance sheet",
+          "value": 1.9,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Balance sheet does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX04-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "pass",
+          "metric_name": "Earnings quality",
+          "value": 13,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings growth is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX04-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "pass",
+          "metric_name": "Price trend",
+          "value": 53,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Trend strength is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX04-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "pass",
+          "metric_name": "Valuation",
+          "value": 19.7,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "Price relative to growth is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX04-valuation",
+              "field": "valuation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 177.75,
+        "daily_change_pct": -1.2,
+        "drawdown_pct": 26.8,
+        "rsi14": 60.3,
+        "analyst_opinions": 11,
+        "analyst_upside_pct": 21.2,
+        "dislocation_score": 9.2
+      },
+      "scores": {
+        "total": 20,
+        "buffett": 7,
+        "lynch": 6,
+        "minervini": 7
+      },
+      "classification": "investigate",
+      "warnings": [
+        "Illustrative source gap: one supporting observation is unavailable."
+      ]
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX05",
+        "company_name": "Brio Materials",
+        "cik": null,
+        "index_name": null,
+        "sector": "Materials",
+        "industry": "Specialty Materials"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "fail",
+          "metric_name": "Cash generation",
+          "value": 10,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX05-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "pass",
+          "metric_name": "Balance sheet",
+          "value": 1.2,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Leverage is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX05-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "pass",
+          "metric_name": "Earnings quality",
+          "value": 13,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings growth is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX05-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "pass",
+          "metric_name": "Price trend",
+          "value": 53,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Trend strength is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX05-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "unknown",
+          "metric_name": "Valuation",
+          "value": null,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "The illustrative valuation input is unavailable.",
+          "evidence": [],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 189.4,
+        "daily_change_pct": -1.9,
+        "drawdown_pct": 29.6,
+        "rsi14": 62.0,
+        "analyst_opinions": 12,
+        "analyst_upside_pct": 19.1,
+        "dislocation_score": 10.0
+      },
+      "scores": {
+        "total": 18,
+        "buffett": 7,
+        "lynch": 6,
+        "minervini": 5
+      },
+      "classification": "watch",
+      "warnings": []
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX06",
+        "company_name": "Harbor Logistics",
+        "cik": null,
+        "index_name": null,
+        "sector": "Industrials",
+        "industry": "Logistics"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "pass",
+          "metric_name": "Cash generation",
+          "value": 15,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation exceeds the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX06-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "pass",
+          "metric_name": "Balance sheet",
+          "value": 1.2,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Leverage is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX06-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "pass",
+          "metric_name": "Earnings quality",
+          "value": 13,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings growth is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX06-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "fail",
+          "metric_name": "Price trend",
+          "value": 48,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Price trend does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX06-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "pass",
+          "metric_name": "Valuation",
+          "value": 19.7,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "Price relative to growth is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX06-valuation",
+              "field": "valuation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 201.05,
+        "daily_change_pct": 0.9,
+        "drawdown_pct": 32.4,
+        "rsi14": 63.7,
+        "analyst_opinions": 13,
+        "analyst_upside_pct": 17.0,
+        "dislocation_score": 6.8
+      },
+      "scores": {
+        "total": 17,
+        "buffett": 6,
+        "lynch": 5,
+        "minervini": 6
+      },
+      "classification": "watch",
+      "warnings": []
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX07",
+        "company_name": "Granite Energy",
+        "cik": null,
+        "index_name": null,
+        "sector": "Energy",
+        "industry": "Energy Services"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "pass",
+          "metric_name": "Cash generation",
+          "value": 15,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation exceeds the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX07-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "pass",
+          "metric_name": "Balance sheet",
+          "value": 1.2,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Leverage is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX07-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "fail",
+          "metric_name": "Earnings quality",
+          "value": 8,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings quality does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX07-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "pass",
+          "metric_name": "Price trend",
+          "value": 53,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Trend strength is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX07-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "pass",
+          "metric_name": "Valuation",
+          "value": 19.7,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "Price relative to growth is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX07-valuation",
+              "field": "valuation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 212.7,
+        "daily_change_pct": 0.2,
+        "drawdown_pct": 35.2,
+        "rsi14": 55.2,
+        "analyst_opinions": 8,
+        "analyst_upside_pct": 14.9,
+        "dislocation_score": 7.6
+      },
+      "scores": {
+        "total": 16,
+        "buffett": 6,
+        "lynch": 5,
+        "minervini": 5
+      },
+      "classification": "watch",
+      "warnings": []
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX08",
+        "company_name": "Mosaic Foods",
+        "cik": null,
+        "index_name": null,
+        "sector": "Consumer Staples",
+        "industry": "Packaged Foods"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "pass",
+          "metric_name": "Cash generation",
+          "value": 15,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation exceeds the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX08-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "fail",
+          "metric_name": "Balance sheet",
+          "value": 1.9,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Balance sheet does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX08-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "pass",
+          "metric_name": "Earnings quality",
+          "value": 13,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings growth is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX08-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "pass",
+          "metric_name": "Price trend",
+          "value": 53,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Trend strength is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX08-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "pass",
+          "metric_name": "Valuation",
+          "value": 19.7,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "Price relative to growth is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX08-valuation",
+              "field": "valuation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 224.35,
+        "daily_change_pct": -0.5,
+        "drawdown_pct": 18.4,
+        "rsi14": 56.9,
+        "analyst_opinions": 9,
+        "analyst_upside_pct": 12.8,
+        "dislocation_score": 8.4
+      },
+      "scores": {
+        "total": 15,
+        "buffett": 6,
+        "lynch": 5,
+        "minervini": 4
+      },
+      "classification": "watch",
+      "warnings": []
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX09",
+        "company_name": "Summit Networks",
+        "cik": null,
+        "index_name": null,
+        "sector": "Communication Services",
+        "industry": "Infrastructure"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "fail",
+          "metric_name": "Cash generation",
+          "value": 10,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX09-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "pass",
+          "metric_name": "Balance sheet",
+          "value": 1.2,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Leverage is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX09-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "pass",
+          "metric_name": "Earnings quality",
+          "value": 13,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings growth is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX09-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "pass",
+          "metric_name": "Price trend",
+          "value": 53,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Trend strength is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX09-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "fail",
+          "metric_name": "Valuation",
+          "value": 20.4,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "Valuation does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX09-valuation",
+              "field": "valuation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 236.0,
+        "daily_change_pct": -1.2,
+        "drawdown_pct": 21.2,
+        "rsi14": 58.6,
+        "analyst_opinions": 10,
+        "analyst_upside_pct": 27.5,
+        "dislocation_score": 9.2
+      },
+      "scores": {
+        "total": 14,
+        "buffett": 5,
+        "lynch": 4,
+        "minervini": 5
+      },
+      "classification": "watch",
+      "warnings": [
+        "Illustrative source gap: one supporting observation is unavailable."
+      ]
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX10",
+        "company_name": "Bluefin Retail",
+        "cik": null,
+        "index_name": null,
+        "sector": "Consumer Discretionary",
+        "industry": "Specialty Retail"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "pass",
+          "metric_name": "Cash generation",
+          "value": 15,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation exceeds the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX10-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "pass",
+          "metric_name": "Balance sheet",
+          "value": 1.2,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Leverage is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX10-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "pass",
+          "metric_name": "Earnings quality",
+          "value": 13,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings growth is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX10-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "fail",
+          "metric_name": "Price trend",
+          "value": 48,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Price trend does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX10-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "pass",
+          "metric_name": "Valuation",
+          "value": 19.7,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "Price relative to growth is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX10-valuation",
+              "field": "valuation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 247.65,
+        "daily_change_pct": -1.9,
+        "drawdown_pct": 24.0,
+        "rsi14": 60.3,
+        "analyst_opinions": 11,
+        "analyst_upside_pct": 25.4,
+        "dislocation_score": 10.0
+      },
+      "scores": {
+        "total": 13,
+        "buffett": 5,
+        "lynch": 4,
+        "minervini": 4
+      },
+      "classification": "watch",
+      "warnings": []
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX11",
+        "company_name": "Elm Automation",
+        "cik": null,
+        "index_name": null,
+        "sector": "Industrials",
+        "industry": "Automation"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "pass",
+          "metric_name": "Cash generation",
+          "value": 15,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation exceeds the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX11-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "pass",
+          "metric_name": "Balance sheet",
+          "value": 1.2,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Leverage is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX11-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "fail",
+          "metric_name": "Earnings quality",
+          "value": 8,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings quality does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX11-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "pass",
+          "metric_name": "Price trend",
+          "value": 53,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Trend strength is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX11-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "pass",
+          "metric_name": "Valuation",
+          "value": 19.7,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "Price relative to growth is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX11-valuation",
+              "field": "valuation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 259.3,
+        "daily_change_pct": 0.9,
+        "drawdown_pct": 26.8,
+        "rsi14": 62.0,
+        "analyst_opinions": 12,
+        "analyst_upside_pct": 23.3,
+        "dislocation_score": 6.8
+      },
+      "scores": {
+        "total": 12,
+        "buffett": 5,
+        "lynch": 4,
+        "minervini": 3
+      },
+      "classification": "watch",
+      "warnings": []
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX12",
+        "company_name": "Orion Services",
+        "cik": null,
+        "index_name": null,
+        "sector": "Information Technology",
+        "industry": "IT Services"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "pass",
+          "metric_name": "Cash generation",
+          "value": 15,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation exceeds the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX12-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "fail",
+          "metric_name": "Balance sheet",
+          "value": 1.9,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Balance sheet does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX12-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "pass",
+          "metric_name": "Earnings quality",
+          "value": 13,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings growth is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX12-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "pass",
+          "metric_name": "Price trend",
+          "value": 53,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Trend strength is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX12-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "pass",
+          "metric_name": "Valuation",
+          "value": 19.7,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "Price relative to growth is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX12-valuation",
+              "field": "valuation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 270.95,
+        "daily_change_pct": 0.2,
+        "drawdown_pct": 29.6,
+        "rsi14": 63.7,
+        "analyst_opinions": 13,
+        "analyst_upside_pct": 21.2,
+        "dislocation_score": 7.6
+      },
+      "scores": {
+        "total": 11,
+        "buffett": 4,
+        "lynch": 3,
+        "minervini": 4
+      },
+      "classification": "watch",
+      "warnings": []
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX13",
+        "company_name": "Prairie Utilities",
+        "cik": null,
+        "index_name": null,
+        "sector": "Utilities",
+        "industry": "Electric Utilities"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "fail",
+          "metric_name": "Cash generation",
+          "value": 10,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX13-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "pass",
+          "metric_name": "Balance sheet",
+          "value": 1.2,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Leverage is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX13-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "pass",
+          "metric_name": "Earnings quality",
+          "value": 13,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings growth is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX13-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "pass",
+          "metric_name": "Price trend",
+          "value": 53,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Trend strength is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX13-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "fail",
+          "metric_name": "Valuation",
+          "value": 20.4,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "Valuation does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX13-valuation",
+              "field": "valuation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 282.6,
+        "daily_change_pct": -0.5,
+        "drawdown_pct": 32.4,
+        "rsi14": 55.2,
+        "analyst_opinions": 8,
+        "analyst_upside_pct": 19.1,
+        "dislocation_score": 8.4
+      },
+      "scores": {
+        "total": 10,
+        "buffett": 4,
+        "lynch": 3,
+        "minervini": 3
+      },
+      "classification": "watch",
+      "warnings": []
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX14",
+        "company_name": "Lumen Packaging",
+        "cik": null,
+        "index_name": null,
+        "sector": "Materials",
+        "industry": "Containers"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "pass",
+          "metric_name": "Cash generation",
+          "value": 15,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation exceeds the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX14-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "pass",
+          "metric_name": "Balance sheet",
+          "value": 1.2,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Leverage is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX14-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "pass",
+          "metric_name": "Earnings quality",
+          "value": 13,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings growth is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX14-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "fail",
+          "metric_name": "Price trend",
+          "value": 48,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Price trend does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX14-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "pass",
+          "metric_name": "Valuation",
+          "value": 19.7,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "Price relative to growth is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX14-valuation",
+              "field": "valuation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 294.25,
+        "daily_change_pct": -1.2,
+        "drawdown_pct": 35.2,
+        "rsi14": 56.9,
+        "analyst_opinions": 9,
+        "analyst_upside_pct": 17.0,
+        "dislocation_score": 9.2
+      },
+      "scores": {
+        "total": 9,
+        "buffett": 4,
+        "lynch": 3,
+        "minervini": 2
+      },
+      "classification": "watch",
+      "warnings": []
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX15",
+        "company_name": "Cobalt Mobility",
+        "cik": null,
+        "index_name": null,
+        "sector": "Consumer Discretionary",
+        "industry": "Components"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "pass",
+          "metric_name": "Cash generation",
+          "value": 15,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation exceeds the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX15-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "pass",
+          "metric_name": "Balance sheet",
+          "value": 1.2,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Leverage is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX15-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "fail",
+          "metric_name": "Earnings quality",
+          "value": 8,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings quality does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX15-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "pass",
+          "metric_name": "Price trend",
+          "value": 53,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Trend strength is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX15-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "pass",
+          "metric_name": "Valuation",
+          "value": 19.7,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "Price relative to growth is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX15-valuation",
+              "field": "valuation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 305.9,
+        "daily_change_pct": -1.9,
+        "drawdown_pct": 18.4,
+        "rsi14": 58.6,
+        "analyst_opinions": 10,
+        "analyst_upside_pct": 14.9,
+        "dislocation_score": 10.0
+      },
+      "scores": {
+        "total": 8,
+        "buffett": 3,
+        "lynch": 2,
+        "minervini": 3
+      },
+      "classification": "watch",
+      "warnings": [
+        "Illustrative source gap: one supporting observation is unavailable."
+      ]
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX16",
+        "company_name": "Beacon Payments",
+        "cik": null,
+        "index_name": null,
+        "sector": "Financials",
+        "industry": "Payment Services"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "pass",
+          "metric_name": "Cash generation",
+          "value": 15,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation exceeds the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX16-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "fail",
+          "metric_name": "Balance sheet",
+          "value": 1.9,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Balance sheet does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX16-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "pass",
+          "metric_name": "Earnings quality",
+          "value": 13,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings growth is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX16-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "pass",
+          "metric_name": "Price trend",
+          "value": 53,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Trend strength is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX16-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "pass",
+          "metric_name": "Valuation",
+          "value": 19.7,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "Price relative to growth is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX16-valuation",
+              "field": "valuation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 317.55,
+        "daily_change_pct": 0.9,
+        "drawdown_pct": 21.2,
+        "rsi14": 60.3,
+        "analyst_opinions": 11,
+        "analyst_upside_pct": 12.8,
+        "dislocation_score": 6.8
+      },
+      "scores": {
+        "total": 7,
+        "buffett": 3,
+        "lynch": 2,
+        "minervini": 2
+      },
+      "classification": "excluded",
+      "warnings": []
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX17",
+        "company_name": "Vela Diagnostics",
+        "cik": null,
+        "index_name": null,
+        "sector": "Health Care",
+        "industry": "Diagnostics"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "fail",
+          "metric_name": "Cash generation",
+          "value": 10,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX17-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "pass",
+          "metric_name": "Balance sheet",
+          "value": 1.2,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Leverage is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX17-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "pass",
+          "metric_name": "Earnings quality",
+          "value": 13,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings growth is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX17-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "pass",
+          "metric_name": "Price trend",
+          "value": 53,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Trend strength is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX17-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "fail",
+          "metric_name": "Valuation",
+          "value": 20.4,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "Valuation does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX17-valuation",
+              "field": "valuation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 329.2,
+        "daily_change_pct": 0.2,
+        "drawdown_pct": 24.0,
+        "rsi14": 62.0,
+        "analyst_opinions": 12,
+        "analyst_upside_pct": 27.5,
+        "dislocation_score": 7.6
+      },
+      "scores": {
+        "total": 6,
+        "buffett": 3,
+        "lynch": 2,
+        "minervini": 1
+      },
+      "classification": "excluded",
+      "warnings": []
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX18",
+        "company_name": "Terrace Software",
+        "cik": null,
+        "index_name": null,
+        "sector": "Information Technology",
+        "industry": "Application Software"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "pass",
+          "metric_name": "Cash generation",
+          "value": 15,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation exceeds the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX18-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "pass",
+          "metric_name": "Balance sheet",
+          "value": 1.2,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Leverage is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX18-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "pass",
+          "metric_name": "Earnings quality",
+          "value": 13,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings growth is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX18-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "fail",
+          "metric_name": "Price trend",
+          "value": 48,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Price trend does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX18-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "pass",
+          "metric_name": "Valuation",
+          "value": 19.7,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "Price relative to growth is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX18-valuation",
+              "field": "valuation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 340.85,
+        "daily_change_pct": -0.5,
+        "drawdown_pct": 26.8,
+        "rsi14": 63.7,
+        "analyst_opinions": 13,
+        "analyst_upside_pct": 25.4,
+        "dislocation_score": 8.4
+      },
+      "scores": {
+        "total": 5,
+        "buffett": 2,
+        "lynch": 1,
+        "minervini": 2
+      },
+      "classification": "excluded",
+      "warnings": []
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX19",
+        "company_name": "Sequoia Supply",
+        "cik": null,
+        "index_name": null,
+        "sector": "Industrials",
+        "industry": "Distribution"
+      },
+      "gate_results": [
+        {
+          "gate_id": "cash_generation",
+          "state": "pass",
+          "metric_name": "Cash generation",
+          "value": 15,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 12,
+          "period": "FY 2025",
+          "reason": "Cash generation exceeds the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX19-cash_generation",
+              "field": "cash_generation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "balance_sheet",
+          "state": "pass",
+          "metric_name": "Balance sheet",
+          "value": 1.2,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 1.5,
+          "period": "FY 2025",
+          "reason": "Leverage is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX19-balance_sheet",
+              "field": "balance_sheet",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "earnings_quality",
+          "state": "fail",
+          "metric_name": "Earnings quality",
+          "value": 8,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 10,
+          "period": "FY 2025",
+          "reason": "Earnings quality does not meet the illustrative threshold.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX19-earnings_quality",
+              "field": "earnings_quality",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "price_trend",
+          "state": "pass",
+          "metric_name": "Price trend",
+          "value": 53,
+          "unit": "%",
+          "operator": "greater_than_or_equal",
+          "threshold": 50,
+          "period": "FY 2025",
+          "reason": "Trend strength is compared with an illustrative floor.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX19-price_trend",
+              "field": "price_trend",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "gate_id": "valuation",
+          "state": "pass",
+          "metric_name": "Valuation",
+          "value": 19.7,
+          "unit": "ratio",
+          "operator": "less_than_or_equal",
+          "threshold": 20,
+          "period": "FY 2025",
+          "reason": "Price relative to growth is compared with an illustrative ceiling.",
+          "evidence": [
+            {
+              "source": "fictional-example",
+              "source_record_id": "EX19-valuation",
+              "field": "valuation",
+              "as_of": "2026-09-25T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 352.5,
+        "daily_change_pct": -1.2,
+        "drawdown_pct": 29.6,
+        "rsi14": 55.2,
+        "analyst_opinions": 8,
+        "analyst_upside_pct": 23.3,
+        "dislocation_score": 9.2
+      },
+      "scores": {
+        "total": 3,
+        "buffett": 2,
+        "lynch": 1,
+        "minervini": 0
+      },
+      "classification": "excluded",
+      "warnings": []
+    },
+    {
+      "identity": {
+        "canonical_symbol": "EX20",
+        "company_name": "Wren Resources",
+        "cik": null,
+        "index_name": null,
+        "sector": "Energy",
+        "industry": "Exploration"
+      },
+      "gate_results": [],
+      "metrics": {
+        "price": null,
+        "daily_change_pct": null,
+        "drawdown_pct": null,
+        "rsi14": null,
+        "analyst_opinions": null,
+        "analyst_upside_pct": null,
+        "dislocation_score": null
+      },
+      "scores": {},
+      "classification": "unclassified",
+      "warnings": []
+    }
+  ],
+  "warnings": [],
+  "content_hash": null
+}

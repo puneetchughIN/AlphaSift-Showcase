@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AlphaSift · Fictional research walkthrough</title>
+  <style>
+    :root { color-scheme: light; font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #1a302c; background: #f4f7f6; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    button { font: inherit; cursor: pointer; }
+    button:focus-visible, a:focus-visible { outline: 3px solid #e9a650; outline-offset: 3px; }
+    .shell { max-width: 1440px; margin: auto; padding: 0 32px 64px; }
+    .topbar { min-height: 74px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #d5dfdb; gap: 20px; }
+    .brand { color: #123f35; font-size: 22px; font-weight: 750; letter-spacing: -.05em; }
+    .brand span { display: inline-block; width: 17px; height: 17px; margin-right: 9px; border-radius: 4px 1px 4px 1px; background: #0b6b53; transform: rotate(-12deg); }
+    .topbar nav { display: flex; gap: 24px; color: #49605b; font-size: 14px; }
+    .topbar nav a { color: inherit; text-decoration: none; }
+    .topbar nav a:hover { color: #0b6b53; text-decoration: underline; }
+    .flag { border: 1px solid #c8d7d1; border-radius: 50px; padding: 8px 12px; color: #315b51; background: #e9f2ee; font-size: 12px; font-weight: 680; white-space: nowrap; }
+    .hero { display: grid; grid-template-columns: minmax(0,1.7fr) minmax(260px,.75fr); gap: 24px; margin: 26px 0; }
+    .hero-main { min-height: 250px; padding: 37px 40px; border-radius: 14px; background: #123f35; color: #f7fbf8; position: relative; overflow: hidden; }
+    .hero-main::after { content: ""; position: absolute; width: 280px; height: 280px; right: -80px; top: -100px; border: 1px solid #8ab19f; border-radius: 50%; box-shadow: 0 0 0 65px rgba(138,177,159,.08), 0 0 0 130px rgba(138,177,159,.06); pointer-events: none; }
+    .hero-main h1 { max-width: 650px; margin: 0; font-size: clamp(32px, 3.1vw, 49px); line-height: 1.07; letter-spacing: -.052em; font-weight: 650; position: relative; z-index: 1; }
+    .hero-main p { max-width: 620px; color: #d1e2d9; line-height: 1.55; font-size: 16px; margin: 22px 0 0; position: relative; z-index: 1; }
+    .hero-side { padding: 26px 28px; border-radius: 14px; background: #e9f1ec; border: 1px solid #cfddd3; }
+    .hero-side h2 { font-size: 16px; margin: 0 0 16px; }
+    .hero-side p { margin: 0 0 12px; color: #4b625a; font-size: 14px; line-height: 1.5; }
+    .hero-side strong { display: block; color: #123f35; font-size: 31px; line-height: 1.05; letter-spacing: -.04em; margin-bottom: 6px; }
+    .hero-side small { color: #60736c; line-height: 1.45; display: block; }
+    .mini-meter { height: 8px; background: #ccdbd1; border-radius: 8px; overflow: hidden; margin: 16px 0 11px; }
+    .mini-meter span { display: block; width: 50%; height: 100%; background: #0b6b53; }
+    .note-bar { display: flex; align-items: flex-start; gap: 10px; background: #fff8e9; border-left: 4px solid #aa6a18; padding: 13px 16px; color: #674f26; border-radius: 4px 8px 8px 4px; font-size: 14px; line-height: 1.4; }
+    .grid { display: grid; grid-template-columns: minmax(0,1.65fr) minmax(315px,.85fr); gap: 22px; align-items: start; margin-top: 24px; }
+    .panel { background: #fff; border: 1px solid #d8e1dd; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 5px rgba(12,44,34,.03); }
+    .panel-head { padding: 22px 25px 17px; display: flex; justify-content: space-between; align-items: end; gap: 18px; }
+    .panel-head h2 { font-size: 22px; letter-spacing: -.035em; margin: 0 0 5px; }
+    .panel-head p { margin: 0; font-size: 13px; color: #61726e; line-height: 1.4; }
+    .count { flex: none; font-size: 13px; color: #426558; background: #eaf4ee; padding: 7px 10px; border-radius: 7px; }
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    th { background: #f5f8f6; border-top: 1px solid #e3eae7; color: #526760; font-size: 12px; font-weight: 650; padding: 12px 22px; }
+    td { border-top: 1px solid #e3eae7; padding: 17px 22px; font-size: 14px; vertical-align: middle; }
+    tbody tr { cursor: pointer; }
+    tbody tr:hover, tbody tr.selected { background: #edf6f1; }
+    tbody tr:focus-visible { outline: 3px solid #e9a650; outline-offset: -3px; }
+    .company strong { display: block; font-size: 15px; }
+    .company small { display: block; color: #647770; margin-top: 4px; }
+    .symbol { color: #0b6b53; font-weight: 720; }
+    .tag { display: inline-block; border-radius: 5px; padding: 6px 8px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+    .tag.good { background: #e1f3e8; color: #135d3d; }
+    .tag.pending { background: #f3f0e9; color: #705d3c; }
+    .muted { color: #6c7c76; }
+    .table-foot { border-top: 1px solid #e3eae7; padding: 14px 22px; color: #597068; font-size: 12px; line-height: 1.5; }
+    .detail { padding: 23px 25px 26px; min-height: 315px; }
+    .detail h2 { margin: 0 0 7px; font-size: 22px; letter-spacing: -.035em; }
+    .detail p { margin: 0 0 21px; line-height: 1.55; color: #5c6e67; font-size: 14px; }
+    .fact { border-top: 1px solid #e1e9e5; padding: 13px 0; display: flex; justify-content: space-between; gap: 20px; font-size: 14px; }
+    .fact span:first-child { color: #61746d; }
+    .fact span:last-child { text-align: right; font-weight: 650; }
+    .detail-callout { padding: 13px 15px; background: #f0f5f1; border-radius: 8px; color: #36584b; font-size: 13px; line-height: 1.5; margin-top: 15px; }
+    .compare { margin-top: 22px; padding: 22px 25px 25px; }
+    .compare h2 { margin: 0 0 5px; font-size: 20px; }
+    .compare p { color: #61726e; margin: 0 0 16px; line-height: 1.45; font-size: 14px; }
+    .compare button { border: 1px solid #145b48; background: #145b48; color: white; border-radius: 7px; padding: 10px 14px; font-weight: 650; }
+    .compare button:hover { background: #0b4738; }
+    .comparison { margin-top: 18px; display: none; overflow-x: auto; }
+    .comparison.open { display: block; }
+    .comparison td, .comparison th { min-width: 130px; padding: 11px 14px; }
+    .comparison td:first-child, .comparison th:first-child { min-width: 150px; }
+    .footer { margin-top: 28px; color: #6b7b75; font-size: 12px; line-height: 1.5; }
+    @media (max-width: 900px) { .hero, .grid { grid-template-columns: 1fr; } .hero-main { min-height: 215px; } }
+    @media (max-width: 650px) { .shell { padding: 0 16px 40px; } .topbar { min-height: 64px; } .topbar nav { display: none; } .hero { margin-top: 16px; gap: 14px; } .hero-main { padding: 27px 23px; } .hero-main p { font-size: 14px; } .hero-side { padding: 21px; } .panel-head, .detail, .compare { padding-left: 18px; padding-right: 18px; } th, td { padding-left: 13px; padding-right: 13px; } th:nth-child(3), td:nth-child(3) { display: none; } .flag { font-size: 11px; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand"><span aria-hidden="true"></span>AlphaSift</div>
+      <nav aria-label="Walkthrough sections"><a href="#universe">Universe</a><a href="#evidence">Evidence</a><a href="#compare">Compare</a></nav>
+      <div class="flag">Fictional example</div>
+    </header>
+    <main>
+      <section class="hero" aria-label="Introduction">
+        <div class="hero-main"><h1>Start with the evidence.<br>Then decide what to research.</h1><p>See which companies have been screened, why they received a result, and where information is still missing.</p></div>
+        <div class="hero-side"><h2>Example coverage</h2><strong id="coverage">1 of 2</strong><p>stored companies have a screening result</p><div class="mini-meter" aria-hidden="true"><span></span></div><small>The other company remains visible as not evaluated. These counts apply only to this two-company fictional example.</small></div>
+      </section>
+      <div class="note-bar"><span aria-hidden="true">ⓘ</span><span>This page illustrates an analyst workflow using invented values. It is not the private beta, a market-data service, or an investment recommendation.</span></div>
+      <div class="grid">
+        <section class="panel" id="universe" aria-labelledby="universe-title">
+          <div class="panel-head"><div><h2 id="universe-title">Research universe</h2><p>Choose a company to inspect the stored evidence.</p></div><span class="count" id="stored-count">2 stored</span></div>
+          <table><thead><tr><th>Company</th><th>Screening</th><th>Score</th></tr></thead><tbody id="company-rows"></tbody></table>
+          <div class="table-foot">A blank score means no screening result is stored. It does not mean a score of zero or a failed company.</div>
+        </section>
+        <section class="panel detail" id="evidence" aria-live="polite" aria-labelledby="detail-title"><h2 id="detail-title">Evidence</h2><p>Select a company to see what the example can and cannot tell you.</p></section>
+      </div>
+      <section class="panel compare" id="compare"><h2>Compare before you save research</h2><p>Put the screened and unevaluated records side by side. The private product can save notes and watchlists; this illustrative page does not store anything.</p><button type="button" id="compare-button" aria-expanded="false" aria-controls="comparison">Show comparison</button><div class="comparison" id="comparison"></div></section>
+    </main>
+    <footer class="footer">Fictional fixture · No accounts or provider requests · From the separate AlphaSift case-study package</footer>
+  </div>
+  <script>
+    const body = document.querySelector('#company-rows');
+    const detail = document.querySelector('#evidence');
+    const comparison = document.querySelector('#comparison');
+    const compareButton = document.querySelector('#compare-button');
+    const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (char) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+    fetch('../data/synthetic-snapshot.json').then((response) => {
+      if (!response.ok) throw new Error('Example data unavailable');
+      return response.json();
+    }).then((snapshot) => {
+      const companies = snapshot.companies;
+      const isScreened = (item) => item.scores.total != null && item.gate_results.length > 0 && item.classification !== 'unclassified';
+      const screened = companies.filter(isScreened);
+      document.querySelector('#coverage').textContent = `${screened.length} of ${companies.length}`;
+      document.querySelector('#stored-count').textContent = `${companies.length} stored`;
+      body.innerHTML = companies.map((item, index) => {
+        const screened = isScreened(item);
+        return `<tr tabindex="0" data-index="${index}" aria-label="Inspect ${escapeHtml(item.identity.company_name)}"><td class="company"><strong><span class="symbol">${escapeHtml(item.identity.canonical_symbol)}</span> &nbsp;${escapeHtml(item.identity.company_name.replace(' (fictional)', ''))}</strong><small>${escapeHtml(item.identity.sector)} · ${escapeHtml(item.identity.industry)}</small></td><td><span class="tag ${screened ? 'good' : 'pending'}">${screened ? 'Screened' : 'Not evaluated'}</span></td><td>${screened ? escapeHtml(item.scores.total) : '<span class="muted">—</span>'}</td></tr>`;
+      }).join('');
+      function select(index) {
+        const item = companies[index];
+        const screened = isScreened(item);
+        body.querySelectorAll('tr').forEach((row, rowIndex) => row.classList.toggle('selected', rowIndex === index));
+        detail.innerHTML = `<h2 id="detail-title">${escapeHtml(item.identity.company_name.replace(' (fictional)', ''))}</h2><p>${screened ? 'A stored screening result with one illustrative check.' : 'Stored in the universe, but no screening calculation is available.'}</p><div class="fact"><span>Symbol</span><span>${escapeHtml(item.identity.canonical_symbol)}</span></div><div class="fact"><span>Research label</span><span>${screened ? 'Investigate' : 'Unclassified'}</span></div><div class="fact"><span>Score</span><span>${screened ? escapeHtml(item.scores.total) : 'Not available'}</span></div><div class="fact"><span>Illustrative check</span><span>${screened ? '20% vs 15% threshold · pass' : 'Not evaluated'}</span></div><div class="detail-callout">${screened ? 'Source: synthetic fixture, dated 1 Jan 2026. This invented check explains the stored example; it is not an observed company fact.' : 'What to do next: wait for validated evidence before using a screening label. Missing evidence is neither a pass nor a fail.'}</div>`;
+      }
+      body.querySelectorAll('tr').forEach((row) => {
+        row.addEventListener('click', () => select(Number(row.dataset.index)));
+        row.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); select(Number(row.dataset.index)); } });
+      });
+      select(0);
+      comparison.innerHTML = `<table><thead><tr><th>Evidence</th><th>${escapeHtml(companies[0].identity.canonical_symbol)}</th><th>${escapeHtml(companies[1].identity.canonical_symbol)}</th></tr></thead><tbody><tr><td>Screening state</td><td>Screened</td><td>Not evaluated</td></tr><tr><td>Score</td><td>${escapeHtml(companies[0].scores.total)}</td><td>Not available</td></tr><tr><td>Check evidence</td><td>One invented check</td><td>No checks stored</td></tr><tr><td>Research use</td><td>Inspect supporting data</td><td>Await validated inputs</td></tr></tbody></table>`;
+      compareButton.addEventListener('click', () => {
+        const open = comparison.classList.toggle('open');
+        compareButton.textContent = open ? 'Hide comparison' : 'Show comparison';
+        compareButton.setAttribute('aria-expanded', String(open));
+      });
+    }).catch(() => {
+      body.innerHTML = '<tr><td colspan="3">Example data could not load. Start a local server from the repository root using the command in the README.</td></tr>';
+    });
+  </script>
+</body>
+</html>

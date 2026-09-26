@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "snapshot_id": "snap_synthetic_showcase",
+  "snapshot_type": "composite",
+  "status": "valid",
+  "methodology": {
+    "methodology_id": "synthetic-example",
+    "engine_version": "fixture-1"
+  },
+  "worker_run_id": "synthetic-showcase",
+  "idempotency_key": "synthetic-showcase",
+  "started_at": "2026-01-02T00:00:00Z",
+  "completed_at": "2026-01-02T00:01:00Z",
+  "market_as_of": "2026-01-01T00:00:00Z",
+  "universe_version": "synthetic-two-company-example",
+  "counts": {
+    "attempted": 2,
+    "completed": 2,
+    "skipped": 0,
+    "failed": 0,
+    "quarantined": 0
+  },
+  "companies": [
+    {
+      "identity": {
+        "canonical_symbol": "ALFA",
+        "company_name": "Alder Tools (fictional)",
+        "cik": null,
+        "index_name": null,
+        "sector": "Industrials",
+        "industry": "Tools"
+      },
+      "gate_results": [
+        {
+          "gate_id": "illustrative_margin",
+          "state": "pass",
+          "metric_name": "illustrative_margin",
+          "value": 20,
+          "unit": "%",
+          "operator": "greater_than",
+          "threshold": 15,
+          "period": "illustrative year",
+          "reason": "Synthetic check for documentation only",
+          "evidence": [
+            {
+              "source": "synthetic-fixture",
+              "source_record_id": "alfa-example",
+              "field": "illustrative_margin",
+              "as_of": "2026-01-01T00:00:00Z"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "metrics": {
+        "price": 100,
+        "drawdown_pct": 20
+      },
+      "scores": {
+        "total": 22
+      },
+      "classification": "investigate",
+      "warnings": []
+    },
+    {
+      "identity": {
+        "canonical_symbol": "BRVO",
+        "company_name": "Brio Materials (fictional)",
+        "cik": null,
+        "index_name": null,
+        "sector": "Materials",
+        "industry": "Specialty Materials"
+      },
+      "gate_results": [],
+      "metrics": {
+        "price": null
+      },
+      "scores": {},
+      "classification": "unclassified",
+      "warnings": []
+    }
+  ],
+  "warnings": [],
+  "content_hash": null
+}
